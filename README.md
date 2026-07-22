@@ -1,6 +1,6 @@
 # Apify Actor Assets
 
-Public CDN repository for README screenshots and shared brand assets used by [factden](https://apify.com/factden)'s Apify Store actors. Hosted as a public GitHub repo so `raw.githubusercontent.com` URLs render on the Apify Store actor pages.
+Public CDN repository for README screenshots and shared brand assets used by [factden](https://apify.com/factden?fpr=factden)'s Apify Store actors. Hosted as a public GitHub repo so `raw.githubusercontent.com` URLs render on the Apify Store actor pages.
 
 ## Why this repo exists
 
@@ -44,6 +44,11 @@ https://raw.githubusercontent.com/factden/apify-actor-assets/main/g2-reviews-scr
 
 ## Actors hosted here
 
-| Actor | Apify Store | Source (private) |
+| Actor | Apify Store | Assets in this repo |
 |---|---|---|
-| `g2-reviews-scraper` | [factden/g2-reviews-scraper](https://apify.com/factden/g2-reviews-scraper) | factden/g2-reviews-scraper |
+| `google-hotels-scraper` | [Google Hotels Scraper](https://apify.com/factden/google-hotels-scraper?fpr=factden) | [8 screenshots](./google-hotels-scraper/) |
+| `g2-reviews-scraper` | [G2 Reviews Scraper](https://apify.com/factden/g2-reviews-scraper?fpr=factden) | [7 screenshots](./g2-reviews-scraper/) |
+| `expedia-hotel-reviews-scraper` | [Expedia Reviews Scraper](https://apify.com/factden/expedia-hotel-reviews-scraper?fpr=factden) | [5 screenshots](./expedia-hotel-reviews-scraper/) |
+| `hotels-com-reviews-scraper` | [Hotels.com Reviews Scraper](https://apify.com/factden/hotels-com-reviews-scraper?fpr=factden) | [6 screenshots](./hotels-com-reviews-scraper/) |
+| `ctrip-trip-reviews-scraper` | [Trip.com & Ctrip Reviews Scraper](https://apify.com/factden/ctrip-trip-reviews-scraper?fpr=factden) | [9 screenshots](./ctrip-trip-reviews-scraper/) |
+| `indeed-jobs-scraper` | [Indeed Jobs Scraper](https://apify.com/factden/indeed-jobs-scraper?fpr=factden) | [5 screenshots](./indeed-jobs-scraper/) |
