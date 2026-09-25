@@ -1,0 +1,27 @@
+FactDen "How it works" README hero — LOCKED STANDARD (2026-09-25)
+
+One hero infographic per flagship actor. Design source = how-it-works.html (HTML/CSS),
+exported to PNG at ~1240px, committed here, embedded near the top of the README as a
+clickable image linking to the Apify signup page.
+
+LOCKED DESIGN (do not restyle per actor — only swap content):
+- Layout: left-to-right 3-stage pipeline (01 Point it -> 02 Extract -> 03 Structured rows),
+  coral arrow connectors between stages, elevated dark JSON output card as the payoff,
+  monospace "spec chip" field strip along the bottom.
+- Frame: near-black (#10161b) outer frame so the light board pops on a light README.
+- Text: all board text pinned to fixed dark ink (--ink) so it never washes out in dark viewers.
+- Accent: ONE coral (--accent #e8452a), reserved for stage numbers, arrows, star rating, API chip.
+- Vernacular: monospace labels/data (spec-sheet feel). No gradient banners. No em-dashes.
+
+PER-ACTOR FILL (the only things to change):
+  1. Brand mark text + actor name + repo slug (.mark / .brand h2 / .brand .k)
+  2. Flow tag pills (source -> output, e.g. "G2 listings -> structured review rows")
+  3. Stage 01 sources A/B/C (real input URLs/params) + meta bullets
+  4. Stage 02 steps a-d (real anti-bot + parse pipeline) + the "Resilient by design" guard line
+  5. Stage 03 sample JSON (real fields) + star rating + format chips
+  6. Spec chip strip (real field names; mark 2 as .hl highlights)
+  7. Optional: brand-tint the coral accent only if the target brand demands it (keep it single-accent)
+
+SHIP: export PNG -> commit as <actor-slug>/how-it-works.png with SEO filename ->
+embed in README: [![How <Actor> works](<raw url>/how-it-works.png)](https://console.apify.com/sign-up)
+ALWAYS also state the same facts as real headings/text below (PNG is invisible to Google/Bing/AI).
