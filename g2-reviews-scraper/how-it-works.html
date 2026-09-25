@@ -167,13 +167,13 @@
         <!-- STAGE 2 -->
         <div class="stage">
           <div class="stage-h"><span class="stage-n">02</span><h3>Extract</h3><span class="tick"></span></div>
-          <div class="step done"><span class="dot">a</span><div><div class="t">Clear the block</div><div class="d">DataDome + Cloudflare · rotating geo</div></div></div>
-          <div class="step done"><span class="dot">b</span><div><div class="t">Read the JSON state</div><div class="d">structured payload, no brittle DOM</div></div></div>
-          <div class="step done"><span class="dot">c</span><div><div class="t">Collect review rows</div><div class="d">rating · title · pros · cons · date</div></div></div>
-          <div class="step done"><span class="dot">d</span><div><div class="t">Enrich each review</div><div class="d">subratings · role · company size · AI summary</div></div></div>
+          <div class="step done"><span class="dot">a</span><div><div class="t">Find the product</div><div class="d">from a product, category or seller URL</div></div></div>
+          <div class="step done"><span class="dot">b</span><div><div class="t">Pull the reviews</div><div class="d">rating · title · pros · cons · date</div></div></div>
+          <div class="step done"><span class="dot">c</span><div><div class="t">Enrich each review</div><div class="d">subratings · reviewer role · company size · AI summary</div></div></div>
+          <div class="step done"><span class="dot">d</span><div><div class="t">Keep it fresh</div><div class="d">incremental: only reviews newer than last run</div></div></div>
           <div class="guard">
             <div class="gt">Resilient by design</div>
-            <div class="gd">Dual-unlocker fallback · retry-on-block · incremental newer-than-date syncs</div>
+            <div class="gd">No login needed · blocking handled for you · deduped</div>
           </div>
         </div>
 

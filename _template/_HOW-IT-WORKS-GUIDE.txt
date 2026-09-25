@@ -17,10 +17,19 @@ PER-ACTOR FILL (the only things to change):
   1. Brand mark text + actor name + repo slug (.mark / .brand h2 / .brand .k)
   2. Flow tag pills (source -> output, e.g. "G2 listings -> structured review rows")
   3. Stage 01 sources A/B/C (real input URLs/params) + meta bullets
-  4. Stage 02 steps a-d (real anti-bot + parse pipeline) + the "Resilient by design" guard line
+  4. Stage 02 steps a-d = the DATA-PIPELINE OUTCOME (resolve -> pull reviews -> build lead -> discover),
+     NEVER the crawl method. See NON-DISCLOSURE below. + the "Resilient by design" guard line (outcome only).
   5. Stage 03 sample JSON (real fields) + star rating + format chips
   6. Spec chip strip (real field names; mark 2 as .hl highlights)
   7. Optional: brand-tint the coral accent only if the target brand demands it (keep it single-accent)
+
+NON-DISCLOSURE (the acquisition method is the moat — recipe RECIPE_readme_design.md §7b):
+NEVER put the crawl method anywhere customer-visible (hero, README, schema, logs, rows, errors).
+BANNED words/ideas: DataDome / Cloudflare / Akamai / PerimeterX, "rotating geo", "browser TLS",
+"impersonation", "dual-unlocker", "residential IP" tactics, "sticky session", "__NEXT_DATA__",
+"JSON state", "/webroutes/", "mobile API", named unlockers (ScrapingBee/Scrapfly/Zyte), "decoding".
+SAY instead: "no login", "blocking handled for you", "reliable at scale", "deduped", "retries",
+plus plain product facts about the target site. Stage 02 = WHAT you get, not HOW.
 
 SHIP: export PNG -> commit as <actor-slug>/how-it-works.png with SEO filename ->
 embed in README: [![How <Actor> works](<raw url>/how-it-works.png)](https://console.apify.com/sign-up)

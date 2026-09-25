@@ -1,4 +1,4 @@
-<title>How It Works · Justdial Business Leads hero</title>
+<title>How It Works · Zomato Restaurant Reviews hero</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
@@ -120,7 +120,7 @@
 
 <div class="wrap">
   <p class="eyebrow">README hero · how it works</p>
-  <h1 class="page">"How it works": Justdial Business Leads</h1>
+  <h1 class="page">"How it works": Zomato Restaurant Reviews Scraper</h1>
   <p class="page-sub">Design source for the README hero. Locked layout: left-to-right pipeline, one coral accent, spec-sheet vernacular. Render the figure to PNG (recipe §7a) and embed at the top of the README.</p>
 
   <figure class="figure">
@@ -128,13 +128,13 @@
 
       <div class="head">
         <div class="brand">
-          <div class="mark">JD</div>
-          <div><h2>Justdial Business Leads</h2><span class="k">apify · factden/justdial-business-leads</span></div>
+          <div class="mark">Z</div>
+          <div><h2>Zomato Restaurant Reviews Scraper</h2><span class="k">apify · factden/zomato-restaurant-reviews-scraper</span></div>
         </div>
         <div class="flow-tag">
-          <span class="pill">India business listings</span>
+          <span class="pill">Zomato restaurant pages</span>
           <span class="arr">→</span>
-          <span class="pill">leads with real phone + owner</span>
+          <span class="pill">reviews + restaurant leads</span>
         </div>
       </div>
 
@@ -144,21 +144,21 @@
         <div class="stage">
           <div class="stage-h"><span class="stage-n">01</span><h3>Point it</h3><span class="tick"></span></div>
           <div class="src">
-            <div class="lbl"><b>A</b> City + category</div>
-            <div class="val">Mumbai · Restaurants</div>
+            <div class="lbl"><b>A</b> Restaurant URL or ID</div>
+            <div class="val">zomato.com/ncr/warehouse-cafe · 301605</div>
           </div>
           <div class="src">
-            <div class="lbl"><b>B</b> Whole state</div>
-            <div class="val">state: Maharashtra</div>
+            <div class="lbl"><b>B</b> Discover by city</div>
+            <div class="val">city: New Delhi · cuisine: Italian</div>
           </div>
           <div class="src">
-            <div class="lbl"><b>C</b> Or paste Justdial URLs</div>
-            <div class="val">/Mumbai/Restaurants · _BZDET</div>
+            <div class="lbl"><b>C</b> Or paste listing URLs</div>
+            <div class="val">/ncr/connaught-place-restaurants</div>
           </div>
           <div class="meta">
-            <div>Fans out subcategories + localities</div>
-            <div>Goes past the ~100-per-search cap</div>
-            <div>Discovery or Enriched mode</div>
+            <div>Reviews mode or Discovery mode</div>
+            <div>Leads-only toggle (skip reviews)</div>
+            <div>India, UAE + every Zomato market</div>
           </div>
         </div>
 
@@ -167,10 +167,10 @@
         <!-- STAGE 2 -->
         <div class="stage">
           <div class="stage-h"><span class="stage-n">02</span><h3>Extract</h3><span class="tick"></span></div>
-          <div class="step done"><span class="dot">a</span><div><div class="t">Read the listings</div><div class="d">name · rating · area · pincode · GPS</div></div></div>
-          <div class="step done"><span class="dot">b</span><div><div class="t">Fan out the market</div><div class="d">every subcategory + locality</div></div></div>
-          <div class="step done"><span class="dot">c</span><div><div class="t">Go past the cap</div><div class="d">far more than the ~100 per search, deduped</div></div></div>
-          <div class="step done"><span class="dot">d</span><div><div class="t">Enrich the lead</div><div class="d">real phone (not the virtual number) · owner · email · WhatsApp</div></div></div>
+          <div class="step done"><span class="dot">a</span><div><div class="t">Resolve the restaurant</div><div class="d">from a URL, ID or city listing</div></div></div>
+          <div class="step done"><span class="dot">b</span><div><div class="t">Pull the reviews</div><div class="d">newest-first: rating · text · reviewer · owner reply</div></div></div>
+          <div class="step done"><span class="dot">c</span><div><div class="t">Build the lead record</div><div class="d">phone · address · GPS · cuisines · cost</div></div></div>
+          <div class="step done"><span class="dot">d</span><div><div class="t">Discover the market</div><div class="d">expand a city/locality to every restaurant</div></div></div>
           <div class="guard">
             <div class="gt">Resilient by design</div>
             <div class="gd">No login needed · blocking handled for you · deduped</div>
@@ -184,18 +184,18 @@
           <div class="stage-h"><span class="stage-n">03</span><h3>Structured rows</h3><span class="tick"></span></div>
           <div class="out">
             <div class="fn">
-              <span>business_row.json</span>
-              <span class="rate"><span class="star">★</span>4.3</span>
+              <span>review_row.json</span>
+              <span class="rate"><span class="star">★</span>4.2</span>
             </div>
             <div class="json">
-              <div class="row"><span class="jk">"name"</span><span class="jp">:</span> <span class="js">"Kanchan Veg"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"phone"</span><span class="jp">:</span> <span class="js">"9673410606"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"phoneType"</span><span class="jp">:</span> <span class="js">"real"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"whatsapp"</span><span class="jp">:</span> <span class="js">"9673410606"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"contactPerson"</span><span class="jp">:</span> <span class="js">"Mr Prashad Kanchan"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"email"</span><span class="jp">:</span> <span class="js">"owner@…"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"gstNumber"</span><span class="jp">:</span> <span class="js">"27AAAC…1Z5"</span><span class="jp">,</span></div>
-              <div class="row"><span class="jk">"rating"</span><span class="jp">:</span> <span class="jn">4.3</span></div>
+              <div class="row"><span class="jk">"restaurantName"</span><span class="jp">:</span> <span class="js">"Warehouse Cafe"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"rating"</span><span class="jp">:</span> <span class="jn">4</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"ratingType"</span><span class="jp">:</span> <span class="js">"DINING"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"reviewText"</span><span class="jp">:</span> <span class="js">"Great ambience…"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"reviewerName"</span><span class="jp">:</span> <span class="js">"Nitesh Mehra"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"ownerResponse"</span><span class="jp">:</span> <span class="js">"Thank you!"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"reviewDate"</span><span class="jp">:</span> <span class="js">"2026-08-30"</span><span class="jp">,</span></div>
+              <div class="row"><span class="jk">"restaurantId"</span><span class="jp">:</span> <span class="jn">301605</span></div>
             </div>
             <div class="formats">
               <div class="fmt">JSON</div>
@@ -204,21 +204,21 @@
               <div class="fmt api">API</div>
             </div>
           </div>
-          <div class="out-note">One flat, deduped row per business. Pull via API, MCP or a scheduled run.</div>
+          <div class="out-note">Reviews plus a lead record per restaurant. Pull via API, MCP or a scheduled run.</div>
         </div>
 
       </div>
 
       <div class="spec">
         <span class="cap">Fields</span>
-        <span class="chip hl">Real phone</span>
-        <span class="chip">Owner name</span>
-        <span class="chip">Email</span>
-        <span class="chip">WhatsApp</span>
-        <span class="chip">GST unmasked</span>
-        <span class="chip">Address + GPS</span>
-        <span class="chip">Rating & reviews</span>
-        <span class="chip hl">Past the 100 cap</span>
+        <span class="chip hl">Star rating /5</span>
+        <span class="chip">Full review text</span>
+        <span class="chip">Owner responses</span>
+        <span class="chip">Reviewer</span>
+        <span class="chip">Phone + address</span>
+        <span class="chip">GPS + cuisines</span>
+        <span class="chip">Cost for two</span>
+        <span class="chip hl">LLM-ready markdown</span>
       </div>
 
     </div>
